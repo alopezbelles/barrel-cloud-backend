@@ -14,7 +14,7 @@ BookingsController.newbooking = async (req, res) => {
      
       try {
         let book = req.body;  
-        let newBooking = await models.create({
+        let newBooking = await models.Bookings.create({
           status: book.status,
           description: book.description,
           createdAt: new Date(),
