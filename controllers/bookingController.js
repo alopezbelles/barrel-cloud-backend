@@ -1,5 +1,5 @@
 const BookingsController = {};
-const models = require("../models/booking");
+const models = require("../models/index");
 
 //IMPORTAMOS FUNCIONES ORM DE SEQUELIZE
 const { Op } = require("sequelize");
@@ -10,16 +10,17 @@ const { Op } = require("sequelize");
 
 // CREATE NEW BOOKING 
 
-BookingsController.create = async (req, res) => {
+BookingsController.newbooking = async (req, res) => {
      
       try {
-        const { status, description } = req.body;  
-        const newBooking = await models.create({
-          status,
-          description,
+        let book = req.body;  
+        let newBooking = await models.create({
+          status: book.status,
+          description: book.description,
           createdAt: new Date(),
           deletedAt: null
         });
+        console.log("llega hasta aquí ")
   
         res.status(201).json(newBooking);
       } catch (error) {
@@ -29,6 +30,17 @@ BookingsController.create = async (req, res) => {
     };
   
 
+// GET ALL BOOKS
 
+BookingsController.getAll = async (req, res) => {
+    try {
+      let resp = await models.Bookings.findAll({});
+  
+      res.send(resp);
+    } catch (error) {
+      console.error(error);
+      res.status(500).json({ message: 'Error al obtener el listado' });
+    }
+  };
 
 module.exports = BookingsController;

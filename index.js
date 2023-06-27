@@ -1,5 +1,5 @@
 const express = require("express");
-// const cors = require("cors"); // Import cors module
+const cors = require("cors"); // Import cors module
 const app = express();
 const db = require('./db/db');
 const { sequelize } = require("./models/index");
@@ -13,18 +13,15 @@ const PORT = process.env.PORT || 3617;
 
 //CONFIGURACIÓN OPCIONES CORS
 //lo último añadido es control-acces-allow
-// var corsOptions = {
-//     origin: "*",
-//     control: "*",
-//     acces: "*",
-//     allow: "*",
-//     methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
-//     preflightContinue: false,
-//     optionsSuccessStatus: 204
-//   };
+var corsOptions = {
+  origin: "*",
+  methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+  preflightContinue: false,
+  optionsSuccessStatus: 204
+  };
 
 
-// app.use(cors(corsOptions)); //Add CORS Middleware
+app.use(cors(corsOptions)); //Add CORS Middleware
 app.use(express.json());
 app.use(router);
 

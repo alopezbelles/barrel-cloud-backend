@@ -8,6 +8,6 @@ const BookingsRoutes = require("./routes/bookingsRoutes");
 
 // End-points CRUD Spots
 
-router.use('/bookings', BookingsRoutes)
+router.use('/', BookingsRoutes)
 
 module.exports = router;
