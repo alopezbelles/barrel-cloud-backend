@@ -9,5 +9,7 @@ const BookingsController = require("../controllers/bookingController")
 
 router.post("/newbooking",BookingsController.newbooking)
 router.get("/getall", BookingsController.getAll)
+router.delete("/delete/:id", BookingsController.delete)
+router.put("/update/:id", BookingsController.update)
 
 module.exports = router;
