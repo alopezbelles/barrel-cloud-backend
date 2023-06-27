@@ -1,5 +1,5 @@
-'use strict';
-const { Model } = require('sequelize');
+"use strict";
+const { Model } = require("sequelize");
 module.exports = (sequelize, DataTypes) => {
   class Bookings extends Model {
     static associate(models) {
@@ -12,23 +12,23 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.INTEGER,
         allowNull: false,
         autoIncrement: true,
-        primaryKey: true
+        primaryKey: true,
       },
       status: {
         type: DataTypes.STRING,
         allowNull: false,
         validate: {
-          isIn: [['active', 'pending', 'canceled']]
-        }
+          isIn: [["active", "pending", "canceled"]],
+        },
       },
       createdAt: DataTypes.DATE,
       deletedAt: DataTypes.DATE,
-      description: DataTypes.TEXT
+      description: DataTypes.TEXT,
     },
     {
       sequelize,
-      modelName: 'Bookings',
-      timestamps: false
+      modelName: "Bookings",
+      timestamps: false,
     }
   );
   return Bookings;
