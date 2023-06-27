@@ -10,7 +10,11 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       status: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
+        allowNull: false,
+        validate: {
+          isIn: [['active', 'pending', 'canceled']]
+        }
       },
       createdAt: {
         type: Sequelize.DATE

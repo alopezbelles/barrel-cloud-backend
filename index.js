@@ -4,7 +4,7 @@ const app = express();
 const db = require('./db/db');
 const { sequelize } = require("./models/index");
 
-// const router = require('./router') 
+const router = require('./router') 
 
 
 
@@ -26,7 +26,7 @@ const PORT = process.env.PORT || 3617;
 
 // app.use(cors(corsOptions)); //Add CORS Middleware
 app.use(express.json());
-// app.use(router);
+app.use(router);
 
 // app.get('/', (req, res) => {res.send('Pantalla de inicio');});
 

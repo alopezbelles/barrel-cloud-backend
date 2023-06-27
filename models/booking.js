@@ -14,7 +14,13 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   Booking.init({
-    status: DataTypes.STRING,
+    status: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        isIn: [['active', 'pending', 'canceled']]
+      }
+    },
     createdAt: DataTypes.DATE,
     deletedAt: DataTypes.DATE,
     description: DataTypes.STRING
