@@ -62,7 +62,7 @@ BookingsController.delete = async (req, res) => {
 
 BookingsController.update = async (req, res) => {
   try {
-    const { id } = req.params;
+    const { id } = req.body; // Obtener el id desde el cuerpo de la solicitud
     const { status } = req.body;
 
     // Buscar el registro por el id_book
