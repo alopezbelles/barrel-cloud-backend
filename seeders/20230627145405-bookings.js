@@ -10,7 +10,19 @@ module.exports = {
           status: "active",
           createdAt: new Date(),
           deletedAt: null,
-          description: "Descripción1",
+          description: "Amsterdam Booking",
+        },
+        {
+          status: "pending",
+          createdAt: new Date(),
+          deletedAt: null,
+          description: "Thailand Booking",
+        },
+        {
+          status: "canceled",
+          createdAt: new Date(),
+          deletedAt: null,
+          description: "New York Booking",
         },
       ],
       {}

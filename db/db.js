@@ -1,7 +1,7 @@
-const config = require('../config/config.json')
-const Sequelize = require('sequelize')
+const config = require("../config/config.json");
+const Sequelize = require("sequelize");
 
-require ('dotenv').config()
+require("dotenv").config();
 
 const sequelize = new Sequelize(
   process.env.DB_DATABASE,
@@ -10,8 +10,8 @@ const sequelize = new Sequelize(
   {
     host: process.env.DB_HOST,
     port: process.env.DB_PORT,
-    dialect: process.env.DB_DIALECT
+    dialect: process.env.DB_DIALECT,
   }
-)
+);
 
-module.exports = sequelize
+module.exports = sequelize;
