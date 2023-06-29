@@ -24,7 +24,8 @@ d
 - El resto de las credenciales os las hago llegar por privado.
 - Instalar las dependencias con el comando: "npm install". Esto buscará el archivo package.json e instalará las dependencias.
 - Con el comando "npx sequelize-cli db:migrate"  se ejecutan  las migraciones y crear las tablas en la base de datos.
-- Con el comando "npx sequelize-cli db:seed:all" se migran los seeders de la entidad Bookings. Esto añade tres registros a la base de datos con los que poder previsualizar en el front el funcionamiento inicial de la aplicación. 
+- Con el comando "npx sequelize-cli db:seed:all" se migran los seeders de la entidad Bookings. Esto añade tres registros a la base de datos con los que poder previsualizar en el front el funcionamiento inicial de la aplicación.
+- Crear un archivo .env en el proyecto con las credenciales que te paso por privado. 
 
 
 
