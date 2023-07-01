@@ -1,24 +1,26 @@
 {
   "development": {
     "username": "root",
-    "password": "root",
-    "database": "barrel_cloud_backend",
-    "host": "127.0.0.1",
+    "password": "YOmVecwBky5N1hR7aAoK",
+    "database": "railway",
+    "host": "containers-us-west-190.railway.app",
     "dialect": "mysql",
-    "port": 33060
+    "port": 6877
   },
   "test": {
     "username": "root",
-    "password": null,
-    "database": "database_test",
-    "host": "127.0.0.1",
-    "dialect": "mysql"
+    "password": "YOmVecwBky5N1hR7aAoK",
+    "database": "railway",
+    "host": "containers-us-west-190.railway.app",
+    "dialect": "mysql",
+    "port": 6877
   },
   "production": {
     "username": "root",
-    "password": null,
-    "database": "database_production",
-    "host": "127.0.0.1",
-    "dialect": "mysql"
+    "password": "YOmVecwBky5N1hR7aAoK",
+    "database": "railway",
+    "host": "containers-us-west-190.railway.app",
+    "dialect": "mysql",
+    "port": 6877
   }
 }
