@@ -15,25 +15,17 @@ Backend Repository Trip Wise for Barrel Cloud
 
 ### Descripción general del proyecto 
 
-El proyecto consiste en el diseño y desarrollo de una base de datos y una API para la gestión de una plataforma de reservas de viajes. 
-La base de datos ha sido creada con lenguaje SQL y gestionada con MYSQL. 
-La API ha sido diseñada con la librería Express.js de Node.js. 
-La base de datos está alojada en Railway. 
+El proyecto se enfoca en el diseño y desarrollo de una base de datos y una API para la gestión de una plataforma de reservas de viajes. La base de datos está creada utilizando el lenguaje SQL y se gestiona con MySQL. La API se ha diseñado utilizando la librería Express.js de Node.js. Además, la base de datos está alojada en Railway.
 
 ### Pasos para arrancar el proyecto en entorno local
-- Con  Node.js instalado, clonar el proyecto en el entorno local. 
-- Es necesario tener un servidor con MySql en el entorno local.
-- Instalar las dependencias con el comando: "npm install". Esto buscará el archivo package.json e instalará las dependencias.
-- Con el comando "npx sequelize-cli db:migrate"  se ejecutan  las migraciones y crear las tablas en la base de datos.
-- Con el comando "npx sequelize-cli db:seed:all" se migran los seeders de la entidad Bookings. Esto añade tres registros a la base de datos con los que poder previsualizar en el front el funcionamiento inicial de la aplicación.
-- Crear un archivo .env en el proyecto con las credenciales que te paso por privado.
-- El servidor se arranca con el comando "npm run dev" y se echa abajo con "control+c". El servidor tiene que estar arrancado para que funcione el FrontEnd. 
-
-
+- Clonar el proyecto en el entorno local con Node.js instalado. 
+- Asegurarse de tener un servidor MySQL configurado en el entorno local.
+- Instalar las dependencias ejecutando el comando "npm install". Esto instalará las dependencias mencionadas en el archivo package.json.
+- Ejecutar el comando "npx sequelize-cli db:migrate" para ejecutar las migraciones y crear las tablas en la base de datos.
+- jecutar el comando "npx sequelize-cli db:seed:all" para migrar los seeders de la entidad Bookings. Esto añadirá tres registros a la base de datos para tener una vista previa del funcionamiento inicial de la aplicación en el frontend.
 
 ### Tablas
-La base de datos consta de una única tabla. La entidad "Bookings" cuenta con los atributos "id_book", "status", "createdAt", "deletedAt", "description". 
-
+La base de datos consta de una única tabla llamada "Bookings". Esta entidad tiene los siguientes atributos: "id_book", "status", "createdAt", "deletedAt" y "description".
 
 ### Endpoints
 Para poder ejetutar los endpoints se ejecuta la raiz:
