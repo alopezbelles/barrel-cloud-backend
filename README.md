@@ -15,7 +15,9 @@ Backend Repository Trip Wise for Barrel Cloud
 
 ### Descripción general del proyecto 
 
-El proyecto consiste en el diseño y desarrollo de una base de datos y una api para la gestión de una plataforma de reservas de viajes. 
+El proyecto consiste en el diseño y desarrollo de una base de datos y una API para la gestión de una plataforma de reservas de viajes. 
+La base de datos ha sido creada con lenguaje SQL y gestionada con MYSQL. 
+La API ha sido diseñada con la librería Express.js de Node.js. 
 La base de datos está alojada en Railway. 
 
 ### Pasos para arrancar el proyecto en entorno local
